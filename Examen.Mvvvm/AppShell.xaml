@@ -1,15 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<Shell
-    x:Class="Examen.Mvvvm.AppShell"
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell 
+    x:Class="ExamenMvvm.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Examen.Mvvvm"
-    Shell.FlyoutBehavior="Disabled"
-    Title="Examen.Mvvvm">
+    xmlns:local="clr-namespace:ExamenMvvm">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+        Title="Inicio"
+        ContentTemplate="{DataTemplate local:MainPage}" />
 </Shell>

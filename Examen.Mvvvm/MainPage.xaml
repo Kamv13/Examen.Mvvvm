@@ -1,39 +1,45 @@
-﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:vm="clr-namespace:ExamenMvvm.ViewModels"
-             x:Class="ExamenMvvm.MainPage">
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    x:Class="ExamenMvvm.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:ExamenMvvm.ViewModels">
+
 
     <ContentPage.BindingContext>
-        <vm:MainViewModel/>
+        <viewmodels:MainPageViewModel />
     </ContentPage.BindingContext>
 
     <ScrollView>
-        <StackLayout Padding="20" Spacing="15">
+        <StackLayout Padding="20" Spacing="10">
+ 
+            <Label Text="Producto 1:" />
+            <Entry Text="{Binding Producto1, Mode=TwoWay}"
+                   Placeholder="Ingrese valor para producto 1"
+                   Keyboard="Numeric" />
 
-          
-            <Label Text="Producto 1:" FontAttributes="Bold" />
-            <Entry Placeholder="Ingrese el valor" Text="{Binding Producto1}" Keyboard="Numeric" />
+            <Label Text="Producto 2:" />
+            <Entry Text="{Binding Producto2, Mode=TwoWay}"
+                   Placeholder="Ingrese valor para producto 2"
+                   Keyboard="Numeric" />
 
-            <Label Text="Producto 2:" FontAttributes="Bold" />
-            <Entry Placeholder="Ingrese el valor" Text="{Binding Producto2}" Keyboard="Numeric" />
+            <Label Text="Producto 3:" />
+            <Entry Text="{Binding Producto3, Mode=TwoWay}"/>
 
-            <Label Text="Producto 3:" FontAttributes="Bold" />
-            <Entry Placeholder="Ingrese el valor" Text="{Binding Producto3}" Keyboard="Numeric" />
+            <Label Text="Subtotal:" />
+            <Entry Text="{Binding Subtotal}" IsReadOnly="True" />
 
-           
-            <Label Text="Subtotal:" FontAttributes="Bold" />
-            <Entry Text="{Binding Subtotal}" IsEnabled="False" />
+            <Label Text="Descuento:" />
+            <Entry Text="{Binding Descuento}" IsReadOnly="True" />
 
-            <Label Text="Descuento(%):" FontAttributes="Bold" />
-            <Entry Text="{Binding Descuento}" IsEnabled="False" />
 
-            <Label Text="Total a Pagar:" FontAttributes="Bold" />
-            <Entry Text="{Binding Total}" IsEnabled="False" />
+            <Label Text="Total a pagar:" />
+            <Entry Text="{Binding Total}" IsReadOnly="True" />
 
-          
+
             <Button Text="Calcular" Command="{Binding CalcularCommand}" />
-            <Button Text="Limpiar" Command="{Binding LimpiarCommand}" />
 
+            <Button Text="Limpiar" Command="{Binding LimpiarCommand}" />
         </StackLayout>
     </ScrollView>
 </ContentPage>

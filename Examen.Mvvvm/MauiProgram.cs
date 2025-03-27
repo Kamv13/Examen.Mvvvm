@@ -1,6 +1,9 @@
 ﻿using Microsoft.Extensions.Logging;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Hosting;
 
-namespace Examen.Mvvvm
+namespace ExamenMvvm
 {
     public static class MauiProgram
     {
@@ -16,7 +19,7 @@ namespace Examen.Mvvvm
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

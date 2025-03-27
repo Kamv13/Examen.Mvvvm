@@ -7,7 +7,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
 
-namespace Examen_Mvvm.ViewModels
+namespace ExamenMvvm.ViewModels
     {
         public partial class MainPageViewModel : ObservableObject
         {
